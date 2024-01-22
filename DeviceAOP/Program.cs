@@ -21,6 +21,13 @@ namespace Device
         [Regex("^Z[A-Z]{3}\\d{12}$", "Barcode should start with 4 alphabets, where 'z' is the first char followed by three char & End with 12 digits")]
         public string BarCode { get; set; }
 
+        public Device(string Id, int Code, string Description, string BarCode)
+        {
+            this.Id = Id;
+            this.Code = Code;
+            this.Description = Description;
+            this.BarCode = BarCode;
+        }
         
 
     }
