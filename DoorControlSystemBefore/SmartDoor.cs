@@ -12,19 +12,14 @@ namespace DoorsControlSystem
         public event Action<DoorState> StateChanged;
         public DateTime openedTime;
         public DoorState currentState;
-        TimerManager timerManagerObj;
-        public SmartDoor(TimerManager timerManager)
-        {
-            openedTime = DateTime.Now;
-            timerManagerObj = timerManager; 
-        }
+        openedTime = DateTime.Now;
         public override void Open()
         {
             
             if (this.currentState == DoorState.CLOSED)
             {
                 this.currentState = DoorState.OPENED;
-                openedTime = DateTime.Now;
+                StateChanged.Invoke(this.currentState);
                
             }
             
@@ -35,17 +30,12 @@ namespace DoorsControlSystem
             if (this.currentState == DoorState.OPENED)
             {
                 this.currentState = DoorState.CLOSED;
+                StateChanged.Invoke(this.currentState);
             }
             
         }
        
-        public void Notify(bool value)
-        {
-            if (value == true)
-            {
-                StateChanged.Invoke(this.currentState);
-            }
-        }
+       
 
         
     }
