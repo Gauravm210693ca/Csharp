@@ -14,10 +14,9 @@ namespace DoorsControlSystem
         static void Main(string[] args)
         {
             SimpleDoor simpleDoorObj = new SimpleDoor();
-            TimerManager timerManagerObj = new TimerManager();
-            SmartDoor smartDoorObj = new SmartDoor(timerManagerObj);
-            timerManagerObj.StartTimer(smartDoorObj);
             
+            SmartDoor smartDoorObj = new SmartDoor();
+           
             BuzzerManager buzzerManagerObj = new BuzzerManager();
             Action<DoorState> buzzerObserver = new Action<DoorState>(buzzerManagerObj.Update);
             smartDoorObj.StateChanged += buzzerObserver;
@@ -31,7 +30,7 @@ namespace DoorsControlSystem
             smartDoorObj.StateChanged += autoCloseObserver;
 
             smartDoorObj.Open();
-            Thread.Sleep(2200);
+            
             smartDoorObj.Close();
         }
     }
