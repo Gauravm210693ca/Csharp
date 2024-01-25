@@ -43,9 +43,14 @@ namespace DynamicArray
             public T this[int index]
             {
                 get
-                {
+               {
+                    if (index < 0 || index >= size)
+                    {
+                         throw new IndexOutOfRangeException("Index is out of range.");
+                    }
+
                     return array[index];
-                }
+               }
             }
         }
     public class Program { 
