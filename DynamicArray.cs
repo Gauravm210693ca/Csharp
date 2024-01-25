@@ -27,14 +27,14 @@ namespace DynamicArray
             {
                 if (count >= capacity)
                 {
-                    ResizeArray();
+                    ResizeArray(index);
                 }
                 array[index] = item;
                 count++;
             }
-            private void ResizeArray()
+            private void ResizeArray(int index)
             {
-                capacity *= 2;
+                capacity +=index;
                 T[] newArray = new T[capacity];
                 Array.Copy(array, newArray, count);
                 array = newArray;
