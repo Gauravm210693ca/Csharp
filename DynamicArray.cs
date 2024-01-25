@@ -25,7 +25,7 @@ namespace DynamicArray
             }
             public void Add(int index, T item)
             {
-                if (count == capacity)
+                if (count >= capacity)
                 {
                     ResizeArray();
                 }
