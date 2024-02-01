@@ -1,0 +1,7 @@
+C:\Users\x6ggupta\source\repos\Door\Door\obj\Debug\Door.csproj.AssemblyReference.cache
+C:\Users\x6ggupta\source\repos\Door\Door\obj\Debug\Door.csproj.CoreCompileInputs.cache
+C:\Users\x6ggupta\source\repos\Door\Door\bin\Debug\Door.exe.config
+C:\Users\x6ggupta\source\repos\Door\Door\bin\Debug\Door.exe
+C:\Users\x6ggupta\source\repos\Door\Door\bin\Debug\Door.pdb
+C:\Users\x6ggupta\source\repos\Door\Door\obj\Debug\Door.exe
+C:\Users\x6ggupta\source\repos\Door\Door\obj\Debug\Door.pdb
